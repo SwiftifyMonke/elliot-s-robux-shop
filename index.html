@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elliot's robux shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://i.imgur.com/eEyyQl1.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff; /* All text is white */
+            font-weight: 300; /* Thinner font */
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 0.5em 1em;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            z-index: 1000;
+        }
+        header img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @keyframes slide-right {
+            0% {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            font-size: 1.2em;
+            margin: 0;
+            position: relative; 
+            transition: transform 0.2s ease-in-out; 
+            animation: slide-right 1s ease-out; 
+        }
+
+        header h1:hover {
+            transform: translateX(10px); 
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+            padding-top: 4em;
+        }
+        .shop-info {
+            text-align: center;
+        }
+        .shop-info img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .shop-info img:hover {
+            transform: scale(1.05);
+        }
+        .shop-info p {
+            font-size: 1.1em;
+        }
+        .product-section {
+            margin-top: 3em;
+        }
+        .product-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .product-section h2::before {
+            content: "";
+            display: inline-block;
+            background-image: url('https://i.imgur.com/awyQpgq.png'); 
+            width: 20px; 
+            height: 20px; 
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        @keyframes shake-rise {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            10%, 30%, 50%, 70%, 90% {
+                transform: translateY(-10px) rotate(-10deg);
+            }
+            20%, 40%, 60%, 80% {
+                transform: translateY(-10px) rotate(10deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        .product-section h2:hover::before {
+            animation: shake-rise 0.6s ease-in-out;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px; 
+        }
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1em;
+            text-align: center;
+            flex-basis: 23%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin: 5px; 
+            color: #333;
+            font-weight: 400;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product p {
+            margin: 0.5em 0;
+            font-size: 1em;
+        }
+        .discord-button {
+            display: block;
+            width: 200px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #7289da;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .discord-button:hover {
+            background-color: #5b6eae;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.imgur.com/G1JeBmI.jpeg" alt="Header Image">
+        <h1>elliot's robux shop</h1>
+    </header>
+    <div class="container">
+        <div class="shop-info">
+            <h2>welcome to elliot's robux shop</h2>
+            <p>we sell cheap robux, join discord to buy.</p>
+            <img src="https://i.imgur.com/8RiPLB4.png" alt="Robux Offers">
+        </div>
+
+        <div class="product-section">
+            <h2>Featured Purchase Options</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://i.imgur.com/zMjbZrJ.jpeg">
+                    <p>400 Robux</p>
+                    <p>$2</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.imgur.com/L2s0YBh.jpeg">
+                    <p>800 Robux</p>
+                    <p>$4</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.imgur.com/uJBZsXQ.jpeg">
+                    <p>1,700 Robux</p>
+                    <p>$8.50</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.imgur.com/nCrS7Q9.jpeg">
+                    <p>4,500 Robux</p>
+                    <p>$22.50</p>
+                </div>
+            </div>
+        </div>
+
+        <a class="discord-button" href="https://discord.gg/mBvzZSGxKp" target="_blank">discord link</a>
+    </div>
+
+    <!-- Audio Player -->
+    <audio id="background-music" src="https://dl.sndup.net/95tsb/ilyihy.mp3" type="audio/mpeg"></audio>
+    
+    <script>
+        // Play the background music when the page loads
+        window.onload = function() {
+            var audio = document.getElementById("background-music");
+            audio.play().catch(function(error) {
+                console.error('Autoplay failed:', error);
+            });
+        };
+    </script>
+</body>
+</html>
